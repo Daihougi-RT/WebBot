@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+</head>
+<body>
+    <h1>Chatbot for LINE</h1>
+    <div id="dialogflow-chatbot"></div>
+
+    <iframe
+      height="430"
+      width="350" 
+      src="https://bot.dialogflow.com/1df2a05a-5668-4cf5-9215-1a4620306baf">
+    </iframe>
+    
+    <script>
+        (function() {
+            var s = document.createElement("script");
+            s.src = "https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1";
+            s.onload = function() {
+                DFMessenger.render({
+                    "chatbotAvatar": "https://www.gstatic.com/dialogflow-console/fast/messenger/default-avatar.png",
+                    "origin": "https://console.dialogflow.com",
+                    "dfMessenger": "df-messenger",
+                    "dfMessengerHeight": "500px",
+                    "dfMessengerWidth": "350px"
+                });
+            };
+            document.head.appendChild(s);
+        })();
+    </script>
+</body>
+</html>
